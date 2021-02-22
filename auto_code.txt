@@ -1,0 +1,169 @@
+if(~reset_n) begin
+  VGA_R = 8'hFF;
+  VGA_G = 8'hFF;
+  VGA_B = 8'hFF;
+end else if(vert_lines > VERT_FPORCH + 11'd0 && vert_lines < VERT_FPORCH + 11'd45) begin
+  if(switch) begin
+    VGA_R = 8'hff;
+    VGA_G = 8'hff;
+    VGA_B = 8'hff;
+  end else begin
+    VGA_R = 8'h0;
+    VGA_G = 8'h0;
+    VGA_B = 8'hff;
+  end
+end else if(vert_lines > VERT_FPORCH + 11'd45 && vert_lines < VERT_FPORCH + 11'd90) begin
+  if(switch) begin
+    VGA_R = 8'hf0;
+    VGA_G = 8'hf0;
+    VGA_B = 8'hf0;
+  end else begin
+    VGA_R = 8'h7f;
+    VGA_G = 8'h7f;
+    VGA_B = 8'hff;
+  end
+end else if(vert_lines > VERT_FPORCH + 11'd90 && vert_lines < VERT_FPORCH + 11'd135) begin
+  if(switch) begin
+    VGA_R = 8'he1;
+    VGA_G = 8'he1;
+    VGA_B = 8'he1;
+  end else begin
+    VGA_R = 8'h9f;
+    VGA_G = 8'h7f;
+    VGA_B = 8'hff;
+  end
+end else if(vert_lines > VERT_FPORCH + 11'd135 && vert_lines < VERT_FPORCH + 11'd180) begin
+  if(switch) begin
+    VGA_R = 8'hd2;
+    VGA_G = 8'hd2;
+    VGA_B = 8'hd2;
+  end else begin
+    VGA_R = 8'hcf;
+    VGA_G = 8'h7f;
+    VGA_B = 8'hef;
+  end
+end else if(vert_lines > VERT_FPORCH + 11'd180 && vert_lines < VERT_FPORCH + 11'd225) begin
+  if(switch) begin
+    VGA_R = 8'hc3;
+    VGA_G = 8'hc3;
+    VGA_B = 8'hc3;
+  end else begin
+    VGA_R = 8'hff;
+    VGA_G = 8'h7f;
+    VGA_B = 8'haf;
+  end
+end else if(vert_lines > VERT_FPORCH + 11'd225 && vert_lines < VERT_FPORCH + 11'd270) begin
+  if(switch) begin
+    VGA_R = 8'hb4;
+    VGA_G = 8'hb4;
+    VGA_B = 8'hb4;
+  end else begin
+    VGA_R = 8'hff;
+    VGA_G = 8'h7f;
+    VGA_B = 8'h7f;
+  end
+end else if(vert_lines > VERT_FPORCH + 11'd270 && vert_lines < VERT_FPORCH + 11'd315) begin
+  if(switch) begin
+    VGA_R = 8'ha5;
+    VGA_G = 8'ha5;
+    VGA_B = 8'ha5;
+  end else begin
+    VGA_R = 8'hff;
+    VGA_G = 8'h7f;
+    VGA_B = 8'h7f;
+  end
+end else if(vert_lines > VERT_FPORCH + 11'd315 && vert_lines < VERT_FPORCH + 11'd360) begin
+  if(switch) begin
+    VGA_R = 8'h96;
+    VGA_G = 8'h96;
+    VGA_B = 8'h96;
+  end else begin
+    VGA_R = 8'hff;
+    VGA_G = 8'hb2;
+    VGA_B = 8'h7f;
+  end
+end else if(vert_lines > VERT_FPORCH + 11'd360 && vert_lines < VERT_FPORCH + 11'd405) begin
+  if(switch) begin
+    VGA_R = 8'h87;
+    VGA_G = 8'h87;
+    VGA_B = 8'h87;
+  end else begin
+    VGA_R = 8'he9;
+    VGA_G = 8'hff;
+    VGA_B = 8'h7f;
+  end
+end else if(vert_lines > VERT_FPORCH + 11'd405 && vert_lines < VERT_FPORCH + 11'd450) begin
+  if(switch) begin
+    VGA_R = 8'h78;
+    VGA_G = 8'h78;
+    VGA_B = 8'h78;
+  end else begin
+    VGA_R = 8'hb0;
+    VGA_G = 8'hff;
+    VGA_B = 8'h7f;
+  end
+end else if(vert_lines > VERT_FPORCH + 11'd450 && vert_lines < VERT_FPORCH + 11'd495) begin
+  if(switch) begin
+    VGA_R = 8'h69;
+    VGA_G = 8'h69;
+    VGA_B = 8'h69;
+  end else begin
+    VGA_R = 8'h88;
+    VGA_G = 8'hff;
+    VGA_B = 8'hae;
+  end
+end else if(vert_lines > VERT_FPORCH + 11'd495 && vert_lines < VERT_FPORCH + 11'd540) begin
+  if(switch) begin
+    VGA_R = 8'h5a;
+    VGA_G = 8'h5a;
+    VGA_B = 8'h5a;
+  end else begin
+    VGA_R = 8'h7f;
+    VGA_G = 8'hff;
+    VGA_B = 8'h41;
+  end
+end else if(vert_lines > VERT_FPORCH + 11'd540 && vert_lines < VERT_FPORCH + 11'd585) begin
+  if(switch) begin
+    VGA_R = 8'h4b;
+    VGA_G = 8'h4b;
+    VGA_B = 8'h4b;
+  end else begin
+    VGA_R = 8'h0;
+    VGA_G = 8'hb2;
+    VGA_B = 8'he5;
+  end
+end else if(vert_lines > VERT_FPORCH + 11'd585 && vert_lines < VERT_FPORCH + 11'd630) begin
+  if(switch) begin
+    VGA_R = 8'h3c;
+    VGA_G = 8'h3c;
+    VGA_B = 8'h3c;
+  end else begin
+    VGA_R = 8'h7f;
+    VGA_G = 8'hff;
+    VGA_B = 8'hff;
+  end
+end else if(vert_lines > VERT_FPORCH + 11'd630 && vert_lines < VERT_FPORCH + 11'd675) begin
+  if(switch) begin
+    VGA_R = 8'h2d;
+    VGA_G = 8'h2d;
+    VGA_B = 8'h2d;
+  end else begin
+    VGA_R = 8'h7f;
+    VGA_G = 8'hd0;
+    VGA_B = 8'hff;
+  end
+end else if(vert_lines > VERT_FPORCH + 11'd675 && vert_lines < VERT_FPORCH + 11'd720) begin
+  if(switch) begin
+    VGA_R = 8'h0;
+    VGA_G = 8'h0;
+    VGA_B = 8'h0;
+  end else begin
+    VGA_R = 8'h7f;
+    VGA_G = 8'h94;
+    VGA_B = 8'h2;
+  end
+end else begin
+  VGA_R = 8'h00;
+  VGA_G = 8'h00;
+  VGA_B = 8'h00;
+end
